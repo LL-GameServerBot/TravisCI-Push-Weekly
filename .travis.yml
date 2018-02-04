@@ -1,0 +1,12 @@
+sudo: required
+os: linux
+language: minimal
+
+services:
+  - docker
+
+script:
+  - echo "Weekly push to Docker Hub"
+  - docker build --no-cache -t llgameserverbot/push-weekly .
+  - docker login -u "$DOCKERHUB_USER" -p "$DOCKERHUB_PASS";
+  - docker push llgameserverbot/push-weekly;
