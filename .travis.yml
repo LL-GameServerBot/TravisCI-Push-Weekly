@@ -6,7 +6,7 @@ services:
   - docker
 
 script:
-  - echo "Weekly push to Docker Hub"
+  - echo "Weekly push to Docker HUB"
   - docker build --no-cache -t llgameserverbot/push-weekly .
   - docker login -u "$DOCKERHUB_USER" -p "$DOCKERHUB_PASS";
   - docker push llgameserverbot/push-weekly;
