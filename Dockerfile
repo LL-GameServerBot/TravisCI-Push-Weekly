@@ -1,0 +1,5 @@
+FROM busybox:latest
+
+HEALTHCHECK NONE
+
+ONBUILD USER root
